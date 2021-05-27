@@ -11,3 +11,20 @@ console.log(confirmed); // will be either true or false
 
 var userInput = prompt("rose pink");
 console.log("Great, rose pink is my favorite color too!" + userInput);
+
+//Exercise 3 Answers
+
+alert("The price for the movies is: " + (3+5+1) *3);
+
+alert("I am getting paid: " + ((400 * 10) * (300 * 6) * (350 *4)));
+
+var full = confirm ("Is the class full");
+var conflict = confirm ("Is there a conflict?");
+
+
+var premium= confirm
+var quantity= Number
+var expired=
+ alert
+
+
