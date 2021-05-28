@@ -51,9 +51,35 @@ alert("You can get the discount" + ((!expired) && (premium || (quantity > 2))));
 // the password must not include the username
 // the username must be no more than 20 characters
 // neither the username or password can start or end with whitespace
+var username = 'codeup';
+var password = 'notastrongpassword';
 
+var booleans = [true, true, true, true];
+booleans[0] = (password.length >= 5);
+if(password.search(username) == -1){
+    booleans[1] = true;
+}
+else booleans[1] = false;
+booleans[2] = (password.length <= 20);
 
+function hasWhite(username, password){
+    if(username[0] == ' '){
+        return true;
+    }
+    else if(username[username.length-1] == ' '){
+        return true;
+    }
+    else if(password[0] == ' '){
+        return true;
+    }
+    else if(password[password.length-1] == ' '){
+        return true;
+    }
 
+    return false;
+}
 
+booleans[3] = !hasWhite(username, password);
 
+console.log(booleans);
 
