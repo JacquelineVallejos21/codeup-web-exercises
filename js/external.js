@@ -25,7 +25,6 @@ alert("The price for the movies is: " + (3+5+1)* 3);
 // 6 hours for Google and 4 hours for Amazon.
 alert("I am getting paid for this week: " + ((400*6) + (380*4) + (350*10)));
 
-
 //A student can be enrolled in a class only if the class is not full and
 // the class schedule does not conflict with her current schedule.
 var full = confirm ("Is the class full?");
@@ -41,8 +40,7 @@ var expired= confirm ("Is the coupon expired");
 alert("You can get the discount" + ((!expired) && (premium || (quantity > 2))));
 
 //Use the following code to follow the instructions below:
-//
-//
+
 // var username = 'codeup';
 // var password = 'notastrongpassword';
 // Create a variable that holds a boolean value for each of the following conditions:
@@ -54,32 +52,7 @@ alert("You can get the discount" + ((!expired) && (premium || (quantity > 2))));
 var username = 'codeup';
 var password = 'notastrongpassword';
 
-var booleans = [true, true, true, true];
-booleans[0] = (password.length >= 5);
-if(password.search(username) == -1){
-    booleans[1] = true;
-}
-else booleans[1] = false;
-booleans[2] = (password.length <= 20);
-
-function hasWhite(username, password){
-    if(username[0] == ' '){
-        return true;
-    }
-    else if(username[username.length-1] == ' '){
-        return true;
-    }
-    else if(password[0] == ' '){
-        return true;
-    }
-    else if(password[password.length-1] == ' '){
-        return true;
-    }
-
-    return false;
-}
-
-booleans[3] = !hasWhite(username, password);
-
-console.log(booleans);
-
+var password_is_five_characters = password.length >= 5
+var password_doesnt_contain_username = !password.includes(username);
+var username_less_than_20_characters = username.length <= 20
+var contains_no_whitespace = password === password.trim() && username === username.trim();
