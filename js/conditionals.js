@@ -141,7 +141,7 @@ alert("Your lucky number is" + luckyNumber);
 var answer = confirm("Would you like to enter a number?");
 if (answer) {
     var number = prompt ("Enter a number");
-    if (isNAN(number)) {
+    if (isNaN(number)) {
         alert ("You didn't enter a number")
     } else {
         number = parseFloat (number);
