@@ -10,31 +10,19 @@ function showMultiplicationTable(x) {
     showMultiplicationTable(7);
 //Use a for loop and the code from the previous lessons to generate 10
 // random numbers between 20 and 200 and output to the console whether each number is odd or even.
-//for (let Num = 0; Num <10; Num ++) {
-//var ranNum = Math.ceil(Math.random() * 100) + 10;
-//if (ranNum % 2 === 0)
+for (let ev = 0; ev<10; ev++) {
+    let random = Math.ceil(Math.random() * (200 - 20) + 20);
+    if (random % 2 !== 0) {
+        console.log(random + " is odd");}
+    else {
+        console.log(random + " is even")
+    }
 
-//{
-//console.log("This number is even" + ranNum);
-//}else{
-//console.log("This number is odd" + ranNum);
-//}
-//}
-//console.log(randomNum());
-
+}
 //Create a for loop that uses console.log to create the output shown below.
-function tree(){
-     for(let x=1; x<10; x++){
-         var number ="";
-         number=x;
-         for (let y = 1; y<=x;y++){
-             number=number+x.toString();
-         }
-         console.log(x.toString() );
-
-         }
-     }
-tree();
+for (var index = 1,number = "";index < 10;index++) {
+    number += "1";
+    console.log(index * number)}
 
 //Create a for loop that uses console.log to create the output shown below.//
 
