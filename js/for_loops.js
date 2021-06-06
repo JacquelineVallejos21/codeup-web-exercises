@@ -2,9 +2,9 @@
 // number and console.logs the multiplication table for that number
 // (just multiply by the numbers 1 through 10)
 
-function showMultiplicationTable(x) {
-    for (var index = 1; index < 10; index++) {
-        console.log(x + "x" + index + "=" + (x * index));
+function showMultiplicationTable(num) {
+    for (var index = 1; index < 11; index++) {
+        console.log(num + "x" +index + "=" +num*index);
     }
 }
     showMultiplicationTable(7);
