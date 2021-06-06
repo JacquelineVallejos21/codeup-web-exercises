@@ -15,9 +15,6 @@ while (i < 65536) {
 // the amount of cones being bought by her clients. Use a do-while loop to log to
 // the console the amount of cones sold to each person. This is a way get the random numbers for this exercise.
 
-'use strict;'
-
-
 // a random number that represents the number of cones I can sell today
 let totalCanSell = Math.ceil(Math.random() * (100 - 50) + 50);
 console.log("The number of cones I can sell" +  totalCanSell);
