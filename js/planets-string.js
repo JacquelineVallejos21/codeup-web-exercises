@@ -28,7 +28,7 @@
         '<br>Jupiter</br>','<br>Saturn</br>','<br>Uranus</br>','<br>Neptune</br>',);
 
     var planetsArray = planetsString.split("|");
-    console.log(<ul>,'<li>Mercury</li>' ,'Venus', 'Earth', 'Mars', 'Jupiter', 'Saturn', 'Uranus', 'Neptune',</ul>);
-
+    console.log('<li>Mercury</li>' ,'<li>Venus</li>', '<li>Earth</li>', '<li>Mars</li>', '<li>Jupiter</li>', '<li>Saturn</li>',
+        '<li>Uranus</li>', '<li>Neptune</li>');
 
 })();
