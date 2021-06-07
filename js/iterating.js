@@ -23,7 +23,7 @@
     console.log(names[3]);
 
     var names = ['Nina', 'Rose', 'Jim', 'Bal'];
-    console.log('There are' + names.length + ' names in the array');
+
     /**
      * Write some code that uses a for loop to log every item in the names
      * array.
