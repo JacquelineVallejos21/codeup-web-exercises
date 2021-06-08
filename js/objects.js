@@ -44,14 +44,21 @@
      * represents one shopper. Use a foreach loop to iterate through the array,
      * and console.log the relevant messages for each person
      */
-
-    // var shoppers = [
-    //     {name: 'Cameron', amount: 180},
-    //     {name: 'Ryan', amount: 250},
-    //     {name: 'George', amount: 320}
-    // ];
-
-    /** TODO:
+    var shoppers = [
+        {name: 'Cameron', amount: 180},
+        {name: 'Ryan', amount: 250},
+        {name: 'George', amount: 320}
+    ];
+    shoppers.forEach(function (shopper) {
+        var message = shopper.name + " spent: " + shopper.amount;
+        if (shopper.amount > 200) {
+            message = message + " gets a 12% discount and owes: $" + (shopper.amount - (shopper.amount * .12));
+        } else {
+            message = message + " and owes $" + shopper.amount;
+        }
+        console.log(message);
+    })
+    /*
      * Create an array of objects that represent books and store it in a
      * variable named `books`. Each object should have a title and an author
      * property. The author property should be an object with properties
@@ -63,6 +70,37 @@
      * > console.log(books[0].author.firstName) // "Douglas"
      * > console.log(books[0].author.lastName) // "Adams"
      */
+    var books = {}
+    books = {
+        title: "The Salmon of Doubt",
+        firstName: "Douglas",
+        lastName: "Adams",
+    }
+    console.log(books)
+    books = {
+        title: "Twilight Saga",
+        firstName: "Stephenie",
+        lastName: "Meyer",
+    }
+    console.log(books)
+    books = {
+        title: "Mockingjay",
+        firstName: "Suzanne",
+        lastName: "Collins",
+    }
+    console.log(books)
+    books = {
+        title: "The Notebook",
+        firstName: "Nicholas",
+        lastName: "Sparks",
+    }
+    console.log(books)
+    books = {
+        title: "Gone Girl",
+        firstName: "Gillian",
+        lastName: "Flynn",
+    }
+    console.log(books)
 
     /**
      * TODO:
@@ -89,6 +127,13 @@
      *      ...
      */
 
+    for (var i = 0; i < books.length; i++) {
+        showBookInfo(books[index], i);
+         console.log("Book # " + i);
+         console.log("Title:" + books[i].title);
+         console.log("Author:" + books[i].firstName + " " + books[i].lastName);
+         console.log("---");
+    }
     /**
      * Bonus:
      * - Create a function named `createBook` that accepts a title and author
@@ -99,6 +144,7 @@
      *   outputs the information described above. Refactor your loop to use your
      *   `showBookInfo` function.
      */
+
 
 })();
 
