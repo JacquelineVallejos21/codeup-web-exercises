@@ -10,14 +10,15 @@
      *  > console.log(person.firstName) // "Rick"
      *  > console.log(person.lastName) // "Sanchez"
      */
-var person = {}
-     firstName: "Jacqueline"
-     lastName: "Vallejos"
+     var person = {
+        firstName: "Jacqueline",
+        lastName: "Vallejos",
+    }
+    console.log(person.firstName)
+    console.log(person.lastName)
 
-    console.log(person.Jacqueline)
-    console.log(person.Vallejos)
     /**
-     * TODO:
+
      * Add a sayHello method to the person object that returns a greeting using
      * the firstName and lastName properties.
      * console.log the returned message to check your work
@@ -25,6 +26,10 @@ var person = {}
      * Example
      * > console.log(person.sayHello()) // "Hello from Rick Sanchez!"
      */
+    person.sayHello = function () {
+        return "Hello from "  + person.firstName + person.lastName+ "!"
+    }
+    console.log(person.sayHello());
 
     /** TODO:
      * HEB has an offer for the shoppers that buy products amounting to
@@ -96,3 +101,4 @@ var person = {}
      */
 
 })();
+
