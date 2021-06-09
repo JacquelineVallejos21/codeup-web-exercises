@@ -128,7 +128,7 @@
      */
 
     for (var i = 0; i < books.length; i++) {
-        showBookInfo(books[index], i);
+        showBookInfo(books[i] + i);
          console.log("Book # " + i);
          console.log("Title:" + books[i].title);
          console.log("Author:" + books[i].firstName + " " + books[i].lastName);
@@ -144,6 +144,32 @@
      *   outputs the information described above. Refactor your loop to use your
      *   `showBookInfo` function.
      */
+
+
+
+        function createBook(title, author) {
+
+        let temp = author.split(" ");
+        let firstName = temp[0];
+        let lastName = temp[1];
+        return {
+            title: title,
+            author: {
+                firstName: firstName,
+                lastName: lastName
+            }
+        };
+    }
+
+    var bookTest = createBook("Discord's Apple", "Carrie Vaughn");
+    console.log(bookTest);
+    console.log(books);
+    function showBookInfo(book, number) {
+        console.log("Book # " + number);
+        console.log("Title:" + book.title);
+        console.log("Author:" + book.firstName + " " + books.lastName);
+        console.log("---");
+    }
 
 
 })();
