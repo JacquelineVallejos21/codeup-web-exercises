@@ -4,6 +4,7 @@
     <title>"Register With Us"</title>
 </head>
 <body>
+<h2>"User Login"</h2>
 <form method="POST" action="https://request-inspector.glitch.me/">
 
     <label for="username">Username</label>
@@ -13,7 +14,52 @@
     <label for="password">Password</label>
     <input id="password" name="password" type="password">
     <br>
+    <input type="submit">
+</form>
 
+<h2>Bio</h2>
+<form method="GET" action="https://request-inspector.glitch.me/">
+<textarea name="bio"></textarea>
+    <input type="submit">
+</form>
+
+<h2>"How did you hear about us?"</h2>
+<form method="POST" action="https://request-inspector.glitch.me/">
+<label>
+    <input type="radio" name="q1" value="billboard">
+     billboard
+</label>
+<label>
+    <input type="radio" name="q1" value="radio advertisement">
+     radio advertisement
+</label>
+<label>
+    <input type="radio" name="q1" value="internet advertisement">
+     internet advertisement
+</label>
+<label>
+    <input type="radio" name="q1" value="other">
+     other
+</label>
+    <input type="submit">
+</label>
+</form>
+<h2>"Select Testing"</h2>
+<form method="POST" action="https://request-inspector.glitch.me/">
+<div>
+    <label for="transmission">Select your transmission type: </label>
+    <select id="transmission" name="transmission">
+        <option value="1">Yes</option>
+        <option value="0">No</option>
+    </select>
+</div>
+    <label for="os">What operating systems have you used? </label>
+<form method="GET" action="https://request-inspector.glitch.me/">
+    <select id="os" name="os[]" multiple>
+        <option value="linux">Linux</option>
+        <option value="osx">OS X</option>
+        <option value="windows">Windows</option>
+    </select>
     <input type="submit">
 </form>
 </body>
