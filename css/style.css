@@ -1,4 +1,32 @@
 .fancy-header {
-    color: purple;
+    color: mediumseagreen;
     text-decoration: underline;
 }
+h1 {
+    text-align:center;
+}
+
+body {
+    background-color: bisque;
+    background-image: url("../img/blurred_jpeg.jpeg");
+    background-position: center;
+    background-size: cover;
+    height: 100%;
+}
+
+ul > li {
+    list-style-type:square;
+}
+
+td, tr {
+   padding: 10px;
+   font-size: 1em;
+}
+
+a: hover {
+
+
+}
+
+
+
