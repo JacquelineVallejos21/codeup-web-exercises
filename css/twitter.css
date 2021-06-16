@@ -24,23 +24,21 @@ header {
     position: relative;
     margin-bottom: 80px;
 }
-a {
-    color: var(--link-color);
-}
 .top-nav {
+    position: fixed;
     background: var(--light-bg);
+    z-index: 1000;
+    width: 100%
 }
 .nav-item{
-    display: inline;
-    padding: 10px 20px 10px;
-    width: 100%;
+    display: inline-block;
+    padding: 1.5em;
+
 }
 .nav {
-    display: inline-block;
     list-style-type: none;
     padding: 0;
     margin: 0;
-    z-index: 1000;
 }
 .nav-link {
     color: gray;
@@ -61,13 +59,22 @@ a {
     bottom: -50px;
     right:0
 }
+
 .container{
      columns: 2em;
 }
-.profile-form {
-    line-height:50px;
-    float: right
+.profile-image{
+    position:absolute;
+    bottom: 50px;
 }
+.profile-form {
+    line-height:80px;
+}
+.profile-items {
+    list-stye-type:none;
+    padding: 0;
+}
+
 .btn {
     border: 1px solid var(--main-link-color);
     color: var(--main-link-color);
