@@ -21,6 +21,8 @@ header {
     background-size: cover;
     min-height: 300px;
     padding-top: 275px;
+    position: relative;
+    margin-bottom: 80px;
 }
 a {
     color: var(--link-color);
@@ -29,10 +31,8 @@ a {
     background: var(--light-bg);
 }
 .nav-item{
-    padding: 1.5em;
-    padding: 1.5em;
-    padding: 1.5em;
-    padding: 1.5em;
+    display: inline;
+    padding: 10px 20px 10px;
     width: 100%;
 }
 .nav {
@@ -43,24 +43,30 @@ a {
     z-index: 1000;
 }
 .nav-link {
-    color: var(--main-link-color);
+    color: gray;
     font-weight: bold;
     text-decoration: none;
+    font-family: sans-serif;
 }
 .nav-link:hover {
     color: var(--link-color);
 }
 .profile {
     background: var(--light-bg);
-    height: 80px;
-    float: left;
+    height: 150px;
+}
+.profile-header{
+    float: left
+    position: absolute;
+    bottom: -50px;
+    right:0
 }
 .container{
      columns: 2em;
 }
 .profile-form {
     line-height:50px;
-
+    float: right
 }
 .btn {
     border: 1px solid var(--main-link-color);
