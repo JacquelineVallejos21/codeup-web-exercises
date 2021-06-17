@@ -26,8 +26,6 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: space-around;
-    /* TODO: add a flex container to this selector */
 }
 
 .flex-form {
@@ -36,7 +34,6 @@ body {
     border: 20px solid rgba(0, 0, 0, 0.3);
     border-radius: 5px;
     margin: auto;
-    /* TODO: Add an automatic margin and a flex container to this selector */
 }
 
 .flex-form > * {
@@ -58,8 +55,5 @@ body {
 }
 
 .destination {
-    axis: .15em;
-    /* TODO:
-        Add an explicit size for items along the main axis of 15em.
-        Read more about Flex Basis: https://java.codeup.com/appendix/further-reading/html-css/flexbox-additional-concepts/#flex-basis */
+    flex-basis: .15em;
 }

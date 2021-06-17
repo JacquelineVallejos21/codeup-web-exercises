@@ -5,9 +5,19 @@ body {
     margin: 0;
 }
 nav {
+    display: flex;
+    justify-content: space-between;
     background: gray;
 }
+.nav-items{
+    display:flex;
+}
+.nav-link{
+    align-self: center;
+}
+.nav-link > a{
 
+}
 ul {
     list-style: none;
     padding: 0;
