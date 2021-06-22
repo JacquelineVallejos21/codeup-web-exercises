@@ -20,8 +20,6 @@ h2 {
     color: white;
 }
 
-
 .card-footer {
-    float: right;
-    position: absolute;
+    text-right;
 }
