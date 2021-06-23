@@ -8,7 +8,7 @@ h1 {
    justify-content: center;
    border-radius: .20em;
    border: 10px;
-   background-color: white;
+   background-color: ghostwhite;
 
 }
 
@@ -18,8 +18,4 @@ h2 {
     background-color: deepskyblue;
     border-radius: .15em;
     color: white;
-}
-
-.card-footer {
-    text-right;
 }
