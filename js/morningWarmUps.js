@@ -1,5 +1,5 @@
 // TODO: Create a function named countSpaces that accepts a string and returns the total number of spaces in the string.
-function str = 'this is a string';
+const str = 'this is a string';
 const countSpaces = (str = '') => {
     let count = 0;
     for(let i = 0;
