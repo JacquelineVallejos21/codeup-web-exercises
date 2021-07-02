@@ -33,14 +33,14 @@
         console.log(mainHeader);
 
         // TODO: Set inner html of mainHeader to "JavaScript is Cool"
-        var inner = document.getElementById('main-header');
+        mainHeader.innerHTML = "JavaScript is Cool";
 
         // TODO: Uncomment the next line and get the sub header element by id
         var subHeader = document.getElementById('sub-header');
         console.log(subHeader);
 
         // TODO: Set the text color of subHeader to blue
-        Object.assign(subHeader.style)
+        subHeader.style.color = "blue";
         // TODO: Uncomment the next line and get all list items
         var listItems =  document.getElementsByTagName('li');
         console.log(listItems);
@@ -56,14 +56,12 @@
             }
         };
         // TODO: Set text color of li with dbid = 1 to blue
-        var list = function() {
-            var list = document.getElementsByTagName('li');
 
-            for (var i = 0, l = list.length; i < l; i += 2) {
-                list[i + 1].style.color = 'blue';
+            for(let item of listItems){
+                if(item.getAttribute("data-dbid") === "1"){
+                item.style.color = "blue"
             }
-        };
-        listColor();
+        }
 
         // TODO: Uncomment the next line and get all elements with class name sub-paragraph
         var subParagraphs = document.getElementsByClassName('sub-paragraph');
