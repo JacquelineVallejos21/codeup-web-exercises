@@ -69,10 +69,10 @@ var personThree = {
     lastName: "martinez",
     ageInYears: 25,
     heightInInches: 62,
-    Opening: function() {
+    Start: function() {
         return "Hello, my name is " + capitalizeFirstLetter (this.firstName) +" " + capitalizeFirstLetter (this.lastName)
           + "and" + "" + "I am" + this.ageInYears  + "years old."
     }
 }
 
-console.log(personThree.Opening())
+console.log(personThree.Start())
