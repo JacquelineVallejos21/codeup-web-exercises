@@ -34,14 +34,16 @@ function capitalizeFirstLetter(x){
 // TODO: Create a method on the object down below named getFullName that when called returns the users full name using the "this" key term.
 // Example: personOne.getFullName() ---- returns ----> "silvia floopertan"
 var personOne = {
-    firstName: "silvia",
-    lastName: "floopertan",
+    firstName: "Silvia",
+    lastName: "Floopertan",
     ageInYears: 34,
-    heightInInches: 65
+    heightInInches: 65,
     getFullName: function(){
         return this.firstName + " " + this.lastName;
     }
 }
+console.log(personOne.getFullName())
+
 function capitalizeFirstLetter(string) {
     return string.charAt(0).toUpperCase() + string.slice(1);
 }
@@ -53,7 +55,7 @@ var personTwo = {
     firstName: "dan",
     lastName: "valdarez",
     ageInYears: 61,
-    heightInInches: 73
+    heightInInches: 73,
     getNicelyFormattedFullName: function () {
         return capitalizeFirstLetter(this.firstName) + " " + capitalizeFirstLetter(this.lastName)
     }
@@ -66,10 +68,11 @@ var personThree = {
     firstName: "arlene",
     lastName: "martinez",
     ageInYears: 25,
-    heightInInches: 62
-    intro: function() {
-        return "Hello, my name is " + capitalizeFirstLetter(this.firstName) + capitalizeFirstLetter(this.lastName) + "and I am " + this.ageInYears + "years old."
+    heightInInches: 62,
+    Opening: function() {
+        return "Hello, my name is " + capitalizeFirstLetter (this.firstName) +" " + capitalizeFirstLetter (this.lastName)
+          + "and" + "" + "I am" + this.ageInYears  + "years old."
     }
 }
 
-console.log(personThree.intro)
+console.log(personThree.Opening())
