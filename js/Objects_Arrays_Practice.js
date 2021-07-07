@@ -45,6 +45,15 @@ console.log(removeDuplicates(arr));
 // max([54.5,2,34,-93]);
 // // Should return the following
 // 54.5
+function max(input){
+    if(toString.call(input) !== "[object Array]")
+        return false;
+    return Math.max.apply(null, input);
+}
+
+console.log(max([4,34,193,2,345,46,0]));
+console.log(max([-34,83,21,38,-2039,3.2]));
+console.log(max([54.5,2,34,-93]));
 
 
 // 3. Create a function called mostOccuringNumber that accepts an array of numbers and returns the number that occurs the most within that array.
