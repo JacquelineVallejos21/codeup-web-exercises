@@ -1,4 +1,5 @@
-//1. Create a function called removeDuplicates that accepts an array of strings and returns the array with all duplicate elements filtered out.
+//1. Create a function called removeDuplicates that accepts an array of strings and returns
+// the array with all duplicate elements filtered out.
 //     Examples
 // removeDuplicates(["bob","squid","samantha","bob"]);
 // // Should return the following
@@ -11,7 +12,25 @@
 // removeDuplicates(["2016-02-13","1994-12-21","2016-02-13","2016-02-13","2005-11-29"]);
 // // Should return the following
 // ["1994-12-21","2016-02-13","2005-11-29"]
+var arr = ["bob","squid","samantha","bob"];
 
+function removeDuplicates(data){
+    return data.filter((value, index) => data.indexOf(value) === index);
+}
+console.log(removeDuplicates(arr));
+
+var arr = ["tilda","tilda"];
+
+function getDuplicates(data){
+    return data.filter((value, index) => data.indexOf(value) === index);
+}
+console.log(getDuplicates(arr));
+
+var arr = ["2016-02-13","1994-12-21","2016-02-13","2016-02-13","2005-11-29"];
+function removeDuplicates(data){
+    return [...new Set(data)]
+}
+console.log(removeDuplicates(arr));
 
 // 2. Create a function called max that accepts an array of numbers and returns the largest number from that array.
 //     Examples

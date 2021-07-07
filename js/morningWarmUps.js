@@ -1,4 +1,4 @@
-// TODO: Cle.log(countSpaces(str));reate a function named countSpaces that accepts a string and returns the total number of spaces in the string.
+// TODO: Create a function named countSpaces that accepts a string and returns the total number of spaces in the string.
 const str = 'this is a string';
 const countSpaces = (str = '') => {
     let count = 0;
