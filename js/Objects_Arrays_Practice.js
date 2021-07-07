@@ -56,7 +56,8 @@ console.log(max([-34,83,21,38,-2039,3.2]));
 console.log(max([54.5,2,34,-93]));
 
 
-// 3. Create a function called mostOccuringNumber that accepts an array of numbers and returns the number that occurs the most within that array.
+// 3. Create a function called mostOccuringNumber that accepts an array of numbers and returns the number that
+// occurs the most within that array.
 //     Examples
 // mostOccuringNumber([8,93,28,8,27,-62,32,8,-62]);
 // // Should return the following
@@ -69,8 +70,65 @@ console.log(max([54.5,2,34,-93]));
 // mostOccuringNumber([73.5,8,0,-3,3.50,8.25,3.50]);
 // // Should return the following
 // 3.5
+var arr1=[8,93,28,8,27,-62,32,8,-62];
+var mf = 1;
+var m = 0;
+var item;
+for (var i=0; i<arr1.length; i++)
+{
+    for (var j=i; j<arr1.length; j++)
+    {
+        if (arr1[i] == arr1[j])
+            m++;
+        if (mf<m)
+        {
+            mf=m;
+            item = arr1[i];
+        }
+    }
+    m=0;
+}
+console.log(item+" ( " +mf +" times ) ") ;
 
+var arr2=[8,93,-62.0,28,27,-62,32,8,-62];
+var mf = 1;
+var m = 0;
+var item;
+for (var i=0; i<arr2.length; i++)
+{
+    for (var j=i; j<arr2.length; j++)
+    {
+        if (arr2[i] == arr2[j])
+            m++;
+        if (mf<m)
+        {
+            mf=m;
+            item = arr2[i];
+        }
+    }
+    m=0;
+}
+console.log(item+" ( " +mf +" times ) ") ;
 
+var arr3=[73.5,8,0,-3,3.50,8.25,3.50];
+var mf = 1;
+var m = 0;
+var item;
+for (var i=0; i<arr3.length; i++)
+{
+    for (var j=i; j<arr3.length; j++)
+    {
+        if (arr3[i] == arr3[j])
+            m++;
+        if (mf<m)
+        {
+            mf=m;
+            item = arr3[i];
+        }
+    }
+    m=0;
+}
+console.log(item+" ( " +mf +" times ) ") ;
 
 //4. Create a function called whoIsPassing that accepts an array of objects, where each object is a student's name and class average (from 0 to 100). Your function will return an array of objects where each object is a student's name and whether he/she is passing. Note that a class average of 60 and higher is passing.
 //     Examples
