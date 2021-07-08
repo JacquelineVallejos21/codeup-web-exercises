@@ -117,33 +117,39 @@ console.log(max([54.5,2,34,-93]));
 // 3.5
 //
 
-// function mostOccuringNumber(numbers){
+// function mostOccuringNumber(numbers) {
+//     // 1. count the # of times each number occurs
 //     var counts = [];
-//      for (let i = 0; i < number.length; i++){
-//          var aNumber = numbers[i];
-//          if (counts[aNumber]) === undefined) {
-//              counts[aNumber] = 1;
-//          } else {
-//          counts[aNumber] ++; //gives us access to the counts element at index "aNumber"
-//      }
+//     for (let i = 0; i < numbers.length; i++) {
+//         var aNumber = numbers[i];
+//         if(counts[aNumber] === undefined) {
+//             counts[aNumber] = 1;
+//         } else {
+//             counts[aNumber]++; // gives us access to the counts element at index "aNumber"
+//         }
+//     }
+//     // console.log(counts);
+//     // counts[0] = 55;
+//     // counts["frogs"] = 1;
+//     // 2. scan through the associative array and keep track of the value with the highest count
+//     var maxCount = 0;
+//     var winningNumber = "";
+//     for (const countsKey in counts) {
+//         // console.log("the counts element at countsKey " + countsKey + " has a tally of " + counts[countsKey]);
+//         var currentCount = counts[countsKey];
+//         // when currentCount is > maxCount, we have a new winner so far
+//         if(currentCount > maxCount) {
+//             // update 2 things when we have a new winner
+//             maxCount = currentCount;
+//             winningNumber = countsKey;
+//         }
+//     }
+//     return winningNumber;
 // }
-//      // console.log(counts);
-//      //2. scan through the associative array and keep track of the value with the highest count
-// var winningCount = 0;
-// var winningNumber = "";
-// for(const countsKey in counts){
-//     console.log("the counts element at index" + countsKey + "is value" + counts[countsKey]);
-//     var currentCount = counts[countsKey];
-//     if(currentCount > maxCount){
-//         //update 2 things when we have a new winner
-//         maxCount =currentCount;
-// }
-// }
-//
-// // console.log(mostOccuringNumber([8,93,28,8,27,-62,32,8,-62]));
-// // console.log(mostOccuringNumber([8,93,-62.0,28,27,-62,32,8,-62]));
-// // console.log(mostOccuringNumber([73.5,8,0,-3,3.50,8.25,3.50]));
-// }
+// console.log(mostOccuringNumber([8,93,28,8,27,-62,32,8,-62]));
+// console.log(mostOccuringNumber([8,93,-62.0,28,27,-62,32,8,-62]));
+// console.log(mostOccuringNumber([73.5,8,0,-3,3.50,8.25,3.50]));
+
 var arr1=[8,93,28,8,27,-62,32,8,-62];
 var mf = 1;
 var m = 0;
@@ -273,47 +279,8 @@ console.log(item+" ( " +mf +" times ) ") ;
 //     }
 // ]
 
-
 function whoIsPassing(arrayOfStudents){
-
-    var passingResults = [];
-
-
-    for (let i = 0; i < arrayOfStudents.length; i++) {
-
-
-        if (arrayOfStudents[i].classAverage >= 60){
-            // this means they are passing
-
-            passingResults.push(
-                {
-                name: arrayOfStudents[i].name,
-                passing: true
-                }
-            )
-
-        }else{
-            // this means the student is failing
-
-            passingResults.push(
-                {
-                    name: arrayOfStudents[i].name,
-                    passing: false
-                }
-            )
-
-        }
-    }
-
-    return passingResults;
-
-}
-
-function whoIsPassing(arrayOfStudents){
-
-
-    var passingResults = [];
-
+var passingResults = [];
 
     for (let i = 0; i < arrayOfStudents.length; i++) {
 
@@ -329,7 +296,6 @@ function whoIsPassing(arrayOfStudents){
             }
         )
     }
-
     return passingResults;
 }
 
@@ -365,7 +331,6 @@ var students = [
 ]
                     // arrayOfStudents = students
 console.log(whoIsPassing(students));
-
 
 // 5. Create a function called dateStringToObject that accepts a date in the following string format "YYYY-MM-DD" and returns an object that contains month, day, and year properties.
 //     Examples
