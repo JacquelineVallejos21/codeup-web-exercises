@@ -228,8 +228,14 @@ console.log(item+" ( " +mf +" times ) ") ;
 // reverseString("2016-02-13");
 // // Should return the following
 // "31-21-6102"
+function string_reverse(str)
+    {
+   return str.split("").reverse().join("");
+}
 
-
+console.log(string_reverse("squid"));
+console.log(string_reverse("tilda"));
+console.log(string_reverse("2016-02-13"));
 
 // 7. Create a function called numberInfo that accepts a number and returns an object with the properties isPositive, isEven, isZero. The properties should either be true or false based on if the parameter meets the criteria.
 //     Examples
