@@ -130,7 +130,9 @@ for (var i=0; i<arr3.length; i++)
 }
 console.log(item+" ( " +mf +" times ) ") ;
 
-//4. Create a function called whoIsPassing that accepts an array of objects, where each object is a student's name and class average (from 0 to 100). Your function will return an array of objects where each object is a student's name and whether he/she is passing. Note that a class average of 60 and higher is passing.
+//4. Create a function called whoIsPassing that accepts an array of objects, where each object is a student's name
+// and class average (from 0 to 100). Your function will return an array of objects where each object is a student's
+// name and whether he/she is passing. Note that a class average of 60 and higher is passing.
 //     Examples
 // var students = [
 //     {
