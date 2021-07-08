@@ -55,6 +55,33 @@ console.log(max([4,34,193,2,345,46,0]));
 console.log(max([-34,83,21,38,-2039,3.2]));
 console.log(max([54.5,2,34,-93]));
 
+// function max(arrayOfNumbers){
+//     return Math.max(...arrayOfNumbers);
+// }
+//
+// console.log(max([4,34,193,2,345,46,0]));
+// console.log(max([-34,83,21,38,-2039,3.2]));
+// console.log(max([54.5,2,34,-93]));
+
+// function max(arrayOfNumbers){
+//
+//     var largestNumber;
+//
+//     for (let i = 0; i < arrayOfNumbers.length; i++){
+//
+//         // [4,34,193,2,345,46,0]
+//         if (largestNumber === undefined){
+//             largestNumber = arrayOfNumbers[i]
+//         }
+//         if(arrayOfNumbers[i] > largestNumber){
+//             console.log("I got in here")
+//             largestNumber = arrayOfNumbers[i]
+//         }
+//     }
+//     return largestNumber;
+// }
+
+
 
 // 3. Create a function called mostOccuringNumber that accepts an array of numbers and returns the number that
 // occurs the most within that array.
