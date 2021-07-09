@@ -8,7 +8,7 @@ const countSpaces = (str = '') => {
         if(el !== ' '){
             continue; };
         count++; };
-    return count;
+    return count
 };
 console.log(countSpaces(str));
 
@@ -87,16 +87,18 @@ console.log(personThree.Start());
 //                    { "originalString":"dave", lengthOfOriginalString:4 }
 //                   ]
 
-var arrayObjects = []
-
 function arrayOfStringsToObjects(arrayStrings){
-    for(let i = 0; i < arrayStrings.length ; i++){
-      arrayObjects.push({originalString:arrayStrings[i], lengthOfOriginalString:arrayStrings[i].length})
+
+    var arrayObjects = []
+
+    for (let i = 0; i < arrayStrings.length; i++) {
+        // console.log(arrayStrings[i])
+        arrayObjects.push({ originalString:arrayStrings[i], lengthOfOriginalString:arrayStrings[i].length })
     }
     return arrayObjects;
 }
 
-var arrayOfObjects= (arrayOfStringsToObjects(["hello", "dave"])
+var arrayOfObjects = arrayOfStringsToObjects(["hello", "dave"])
 console.log(arrayOfObjects)
 
 // Part 2
@@ -108,18 +110,22 @@ console.log(arrayOfObjects)
 //                  ]
 //         returns: "hello dave"
 
-function arrayOfStringsToStrings(arrayOfObjectsParam){
+function arrayOfObjectsToStrings(arrayObjectsParam){
+
     var results = []
 
-    arrayOfObjectsParam.forEach(function (singleObject){
+    arrayObjectsParam.forEach(function (singleObject){
 
         results.push(singleObject.originalString)
+
     })
+
     return results.join(" ")
+
 
 }
 
-console.log(arrayObjectsToStrings(arrayOfObjects))
+console.log(arrayOfObjectsToStrings(arrayOfObjects))
 
 
 // TODO: Create a function named getTallUsers that accepts an array of objects. The objects in the array will be in the same format
@@ -135,9 +141,23 @@ console.log(getTallUsers(people));
 // Example: getTallUsers(people)
 // ---- returns ----> [{firstName: "silvia", lastName: "floopertan", ageInYears: 34, heightInInches: 65},
 //
-
-
-
+// function getTallUsers(arrayOfObjects){
+//     var tallUsers = [];
+//
+//     for (let i = 0; i < arrayOfObjects.length; i++{
+//         // console.log(arrayOfObjects[i])
+//         // console.log(arrayOfObjects[i].heightInInches)
+//         var currentUser = arrayOfObjects[i];
+//         var currentUsersHeight = currentUser.heightInInches;
+//         var UserIsTallEnough
+//         if (currentUsersHeight >= 65){
+//             tallUsers.push(currentUser)
+//         }
+//     }
+//     return tallUsers;
+// }
+//
+// console.log(getTallUsers(people));
 // "use strict";
 // ​
 // var myVar = "apple";

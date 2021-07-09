@@ -332,7 +332,8 @@ var students = [
                     // arrayOfStudents = students
 console.log(whoIsPassing(students));
 
-// 5. Create a function called dateStringToObject that accepts a date in the following string format "YYYY-MM-DD" and returns an object that contains month, day, and year properties.
+// 5. Create a function called dateStringToObject that accepts a date in the following string format "YYYY-MM-DD"
+// and returns an object that contains month, day, and year properties.
 //     Examples
 // dateStringToObject("2016-2-13");
 // // Should return the following
@@ -392,7 +393,8 @@ console.log(string_reverse("2016-02-13"));
 
 
 
-// 7. Create a function called numberInfo that accepts a number and returns an object with the properties isPositive, isEven, isZero. The properties should either be true or false based on if the parameter meets the criteria.
+// 7. Create a function called numberInfo that accepts a number and returns an object with the properties isPositive, isEven, isZero.
+// The properties should either be true or false based on if the parameter meets the criteria.
 //     Examples
 // numberInfo(-1);
 // // Should return the following
