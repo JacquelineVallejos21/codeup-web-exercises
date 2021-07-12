@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Konami Code</title>
+</head>
+<body>
+<h1>Konami Code</h1>
+
+<script src="./js/jquery-2.2.4.min.js"></script>
+<script>
+  "use strict";
+  var konamiCode ="ArrowUpArrowDownArrowLeftArrowRight";
+  var allKeysPress = "";
+  $(document).keyup(function(event){
+    allKeysPress += event.key;
+    console.log(event.keyCode);
+
+    $(document).keyup(function() {
+      alert("You have added 30 lives!");
+    });
+
+    $(document).css('background-color', 'pink');
+
+  // $(document).ready(function() {
+  //
+  //   function KeyPressEventHandler(event) {
+  //     allKeysPress += event.key;
+  //     var didKeySeq = (allKeysPress.includes("ArrowUpArrowDownArrowLeftArrowRight"));
+  //     if (didKeySeq){
+  //       allKeysPress = "";
+  //       alert("Hello there!")
+  //     }
+  //   }
+  //   $('document').keydown(keyPressEventHandler);
+  // })
+
+  });
+</script>
+</body>
+</html>
