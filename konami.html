@@ -1,25 +1,47 @@
 <!DOCTYPE html>
-<html>
+<html lang="en" xmlns="http://www.w3.org/1999/html">
 <head>
+  <meta charset="UTF-8">
   <title>Konami Code</title>
+  <style>
+    *{
+      text-align: center;
+    }
+ img{
+   padding-top: 50px;
+ }
+  </style>
+
 </head>
 <body>
 <h1>Konami Code</h1>
 
+<img src="./img/coral.jpeg" alt="coral" width="1000px">
+
 <script src="./js/jquery-2.2.4.min.js"></script>
 <script>
   "use strict";
-  var konamiCode ="ArrowUpArrowDownArrowLeftArrowRight";
-  var allKeysPress = "";
-  $(document).keyup(function(event){
+  $(document).ready(function(){
+    alert("You have added 30 lives!");
+  });
+
+  var konamiCode =['Up', 'Up', 'Down', 'Down', 'Left', 'Right', 'Left', 'Right', 'B', 'A'];
+  var allKeysPress = " ";
+  $(document).keyup(function(event) {
     allKeysPress += event.key;
     console.log(event.keyCode);
 
-    $(document).keyup(function() {
-      alert("You have added 30 lives!");
-    });
+    if (event.key.toLowerCase() === "a") {
+      console.log("a pressed");
+    } else if (event.key.toLowerCase() === "b") {
+      console.log("b pressed");
+    } else if (event.key.toLowerCase() === "ArrowLeft") {
+      console.log("left arrow pressed");
+    } else {
+      console.log(event.key + "pressed");
+    }
 
-    $(document).css('background-color', 'pink');
+  });
 
   // $(document).ready(function() {
   //
@@ -34,7 +56,7 @@
   //   $('document').keydown(keyPressEventHandler);
   // })
 
-  });
+
 </script>
 </body>
 </html>
