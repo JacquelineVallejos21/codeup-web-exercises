@@ -61,6 +61,35 @@
 
 <!--</script>-->
 
+<!--Keyboard Events Lecture-->
+
+<p>Please type something into this form:</p>
+<form>
+    <input type="text" id="textfield" name="textfield" placeholder="Type Here"/>
+</form>
+
+<script>
+function doKeyDown(event){
+
+if (event.key.toLowerCase() === "a"){
+    console.log("a pressed");
+}else if (event.key.toLowerCase() === "b"){
+    console.log("b pressed");
+}else if (event.key.toLowerCase() === "arrowleft"){
+    console.log("left arrow pressed");
+}else {
+    console.log(event.key + "pressed");
+    console.log(event);
+}
+}
+$("textfield").keydown(doKeyDown);
+
+$('#textfield').on('change', function(event) {
+    console.log(event.target.value + 'change happened');
+});
+
+
+</script>
 
 <!--We will load JQuery first-->
 <!--<script src="./js/jquery.js"></script>-->
