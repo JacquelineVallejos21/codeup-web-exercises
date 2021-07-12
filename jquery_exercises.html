@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns="http://www.w3.org/1999/html">
 <head>
   <meta charset="UTF-8">
   <title>Jquery</title>
@@ -39,15 +39,37 @@
 </div>
 
 
+<!--<script>-->
+<!--  $(document).ready(function() {-->
+<!--    alert('Hello Code Up!')-->
+<!--  })-->
+<!--  $('li').css('font-size', '20px');-->
+<!--  // $('.CodeUp').css('border', 'solid 1px red');-->
+
+<!--  $('h1, p, li'). css('background', 'pink');-->
+
+<!--</script>-->
+
 <script>
+  "use strict"
   $(document).ready(function() {
-    alert('Hello Code Up!')
-  })
-  $('li').css('font-size', '20px');
-  // $('.CodeUp').css('border', 'solid 1px red');
+    $('h1').click(function () {
+      $('h1').css('background', 'pink');
+    });
 
-  $('h1, p, li'). css('background', 'pink');
+    $('p').dblclick(function (event) {
+      $('p').css('font-size', '18px');
+    });
 
+    $('li').hover(
+            function(event) {
+              $(this).css('color', 'red');
+            },
+            function(event) {
+              $(this).css('color', 'black');
+            }
+    );
+  });
 </script>
 
 </body>
