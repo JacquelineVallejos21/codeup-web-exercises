@@ -4,51 +4,94 @@
     <meta charset="UTF-8">
     <title>Essential Methods</title>
 </head>
-<h1>Essential Methods</h1>
-<p>I was appended</p>
-<p>I will not overwrite the contents above</p>
+<!--<h1>Essential Methods</h1>-->
+<!--<p>I was appended</p>-->
+<!--<p>I will not overwrite the contents above</p>-->
 <script src="./js/jquery-2.2.4.min.js"></script>
-<body>
-<style>
+<!--<body>-->
+<!--<style>-->
 
-</style>
+<!--</style>-->
+<!--<script>-->
+<!--    "use strict"-->
+
+<!--    $(document).ready(function(){-->
+<!--        $("main").html("<h1>Essential Methods</h1>").css({"background-color":"red"});-->
+
+<!--        $("main").html(mainCurrentHTML + "<p>I will not overwrite the contents above</p>")-->
+<!--        var headerValue = $("h1").html("Essential Methods")-->
+
+<!--        $("main").append("<p> I was appended</p>")-->
+
+<!--        console.log(headerValue)-->
+
+<!--        $("p").addClass("huge")-->
+
+<!--        function removeClassFromPTags(){-->
+<!--            $("p").removeClass("huge green")-->
+<!--            $("main").removeClass("huge")-->
+<!--        }-->
+
+<!--        function toggleHugeClass(element){-->
+<!--           anHOne.toggleClass("huge")-->
+<!--        }-->
+
+<!--        var AnHOne = $("h1");-->
+
+<!--        setTimeout(removeClassFromPTags, 2000);-->
+<!--        //This allows-->
+<!--        setInterval(toggleHugeClass, 1000)-->
+
+<!--        //This is dynamically generating the html pages contents-->
+<!--        setTimeout(function() {-->
+<!--            removeAllClasses("main")-->
+<!--        },3000)-->
+
+
+<!--    })-->
+<!--</script>-->
 <script>
     "use strict"
+    $(document).ready(function() {
 
-    $(document).ready(function(){
-        $("main").html("<h1>Essential Methods</h1>").css({"background-color":"red"});
+        var unOdereredList_Each = $("#each").css({"color": "yellow"})
 
-        $("main").html(mainCurrentHTML + "<p>I will not overwrite the contents above</p>")
-        var headerValue = $("h1").html("Essential Methods")
+        var listItems = $("#each > li");
 
-        $("main").append("<p> I was appended</p>")
+        listItems.each(function (index){
 
-        console.log(headerValue)
+            if(index % 2 === 1){
+                $(this).css({"color": "red"})
+            }else {
+                $(this).css({"color": "orange"})
+            }
 
-        $("p").addClass("huge")
+        })
 
-        function removeClassFromPTags(){
-            $("p").removeClass("huge green")
-            $("main").removeClass("huge")
-        }
+        var listItems = $("#first > li");
+        listItems.css({"color": "pink"})
 
-        function toggleHugeClass(element){
-           anHOne.toggleClass("huge")
-        }
+        listItems.first().css({"background color":"yellow"})
 
-        var AnHOne = $("h1");
+        listItems.last().html("I am ....").css({"background color": "pink"}).css({"font-size": "2em"})
 
-        setTimeout(removeClassFromPTags, 2000);
-        //This allows
-        setInterval(toggleHugeClass, 1000)
+      //children method
+      //   var listItems = $("#children > li");
+      //
+      //   listItems.children().html("I am a child")
 
-        //This is dynamically generating the html pages contents
-        setTimeout(function() {
-            removeAllClasses("main")
-        },3000)
+        var childLi = $(".LoneChild")
+
+        console.log(childLI.parent());
+
+        var firstSection =$("section").first()
+
+
 
 
     })
 </script>
+
+
 </body>
 </html>
