@@ -12,6 +12,10 @@
         .invisible {
             visibility: hidden;
         }
+        .highlight {
+            background: #FF0;
+        }
+
 
     </style>
 </head>
@@ -56,10 +60,53 @@
     <dd class="invisible">Ribbon Falls in Yosemite is nine times taller than Niagara Falls.</dd>
 </dl>
 
+<h3>Haleakala National Park (Maui)</h3>
+<ul id="haleakala">
+    <li>The crater measuring 7 miles across, 2 miles wide</li>
+    <li>And close to 3,000 feet deep. </li>
+    <li>The larger of the two volcanoes that formed the Valley Isle</li>
+    <li>Is estimated to have once reached up to 12,000 feet in elevation.</li>
+</ul>
+
+<h3>Hawaii Volcanoes National Park (Big Island) </h3>
+<ul id="Hawaii">
+    <li>The Park Is Home to Two Active Volcanoes. In Hawaii Volcanoes National Park, you will encounter two active volcanoes.</li>
+    <li>Hawaii Volcanoes National Park covers a total area of 333,000 acres. </li>
+    <li>The number of people visiting Hawaii Volcanoes in 2019 was 1,368,376 (All Years)</li>
+    <li>The lowest elevation found in Hawaii Volcanoes is 0 feet at the Pacific Ocean</li>
+</ul>
+
+<h3>Pu'uhonua o Honaunau National Historical Park (Big Island)</h3>
+<ul id="National">
+    <li>This 180-acre national historic park was once the home of royal grounds and a place of refuge for ancient Hawaiian lawbreakers.</li>
+    <li>Hundreds of years old yet beautifully restored, Puuhonua o Honaunau remains one of Hawaii's most sacred historic places.  </li>
+    <li>Beyond the puuhonua, explore the nearby Royal Grounds, which were the sacred home of alii. </li>
+    <li>Beautiful at sunset, this sacred place gives visitors an important glimpse into early Hawaiian culture.</li>
+</ul>
+<button id="click-me">
+</button>
 <script>
-    $('dt').click(function(){
-        $(this).toggleClass("highlight");
-        $(this).next().toggleClass("invisible");
+"use strict";
+    $(document).ready(function() {
+        $('dt').click(function () {
+            $(this).toggleClass("highlight");
+            $(this).next().toggleClass("invisible");
+        });
+
+        $('#click-me').click(function () {
+            $('ul').each(function (index) {
+                // if (index % 2 !== 0) {
+                //     $(this).css('background-color', '#FF0');
+                // }
+                $(this).children().last().css('background-color', '#FF0')
+            });
+        });
+        $('h3').click(function () {
+            $(this).next().children().css('font-weight: bold');
+        });
+        $('li').click(function () {
+            $(this).parent().children().first().css('color', 'blue');
+        });
     });
 </script>
 
