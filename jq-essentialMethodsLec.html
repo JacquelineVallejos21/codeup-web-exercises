@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Essential Methods</title>
+</head>
+<h1>Essential Methods</h1>
+<p>I was appended</p>
+<p>I will not overwrite the contents above</p>
+<script src="./js/jquery-2.2.4.min.js"></script>
+<body>
+<style>
+
+</style>
+<script>
+    "use strict"
+
+    $(document).ready(function(){
+        $("main").html("<h1>Essential Methods</h1>").css({"background-color":"red"});
+
+        $("main").html(mainCurrentHTML + "<p>I will not overwrite the contents above</p>")
+        var headerValue = $("h1").html("Essential Methods")
+
+        $("main").append("<p> I was appended</p>")
+
+        console.log(headerValue)
+
+        $("p").addClass("huge")
+
+        function removeClassFromPTags(){
+            $("p").removeClass("huge green")
+            $("main").removeClass("huge")
+        }
+
+        function toggleHugeClass(element){
+           anHOne.toggleClass("huge")
+        }
+
+        var AnHOne = $("h1");
+
+        setTimeout(removeClassFromPTags, 2000);
+        //This allows
+        setInterval(toggleHugeClass, 1000)
+
+        //This is dynamically generating the html pages contents
+        setTimeout(function() {
+            removeAllClasses("main")
+        },3000)
+
+
+    })
+</script>
+</body>
+</html>
