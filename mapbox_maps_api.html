@@ -8,7 +8,7 @@
 </head>
 
 <body>
-<div id='map' style='width: 98vw; height: 98vh;'></div>
+<div id='map' style='width: 90vw; height: 90vh;'></div>
 <script src="./js/keys.js"></script>
 <script src="./js/mapbox-geocoder-utils.js"></script>
 <script>
@@ -30,34 +30,35 @@
 
 
         var FranklinBarbecue = new mapboxgl.Popup()
-            .setHTML('<img width="50px" height="auto" src="https://somuchlife.com/wp-content/uploads/2018/09/AFC_cover_002.jpg" >') ;
+            .setHTML('<img width="75px" height="auto" src="https://somuchlife.com/wp-content/uploads/2018/09/AFC_cover_002.jpg" ' +
+                '+ <h4><strong>Franklins Barbecue<strong></strong></h4>');
         marker.setPopup(FranklinBarbecue);
 
-    let restaurants =[
-        {
-            info: {
-                name: "Casa Garcias Mexican Restaurant & Cantina",
-                FoodType: "Upbeat outpost for Tex-Mex favorites including all-day breakfast & lunch specials.",
+        let restaurants =[
+            {
+                info: {
+                    name: "Casa Garcias Mexican Restaurant & Cantina",
+                    FoodType: "Upbeat outpost for Tex-Mex favorites including all-day breakfast & lunch specials.",
+                },
+                address: "1901 I-35, Round Rock, TX 78664",
             },
-            address: "1901 I-35, Round Rock, TX 78664",
-        },
-        {
+            {
+                info: {
+                    name: "BJ's Restaurant & Brewhouse",
+                    FoodType: "Family-friendly chain outpost pairs familiar pub fare with an extensive list of house brews.",
+            },
+                 address: "1901 I-35, Round Rock, TX 78664",
+            },
+            {
             info: {
-                name: "BJ's Restaurant & Brewhouse",
-                FoodType: "Family-friendly chain outpost pairs familiar pub fare with an extensive list of house brews.",
-        },
-             address: "1901 I-35, Round Rock, TX 78664",
-        },
-        {
-        info: {
-                name: "Grotto Ristorante",
-                FoodType:"Neapolitan-style Italian dishes paired with fine wines in an upscale setting with old-world charm.",
-        },
-        address: "4715 Westheimer Rd, Houston, TX 77027",
-    }
-        ]
+                    name: "Grotto Ristorante",
+                    FoodType:"Neapolitan-style Italian dishes paired with fine wines in an upscale setting with old-world charm.",
+            },
+            address: "4715 Westheimer Rd, Houston, TX 77027",
+        }
+            ]
 
-
+    });
 </script>
 
 </body>
