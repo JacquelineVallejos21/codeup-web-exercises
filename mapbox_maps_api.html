@@ -1,0 +1,72 @@
+<!DOCTYPE HTML PUBLIC>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Mapbox Maps API</title>
+    <script src='https://api.mapbox.com/mapbox-gl-js/v2.3.1/mapbox-gl.js'></script>
+    <link href='https://api.mapbox.com/mapbox-gl-js/v2.3.1/mapbox-gl.css' rel='stylesheet' />
+</head>
+
+<body>
+<div id='map' style='width: 98vw; height: 98vh;'></div>
+<script src="./js/keys.js"></script>
+<script src="./js/mapbox-geocoder-utils.js"></script>
+<script>
+    mapboxgl.accessToken =  mapboxAPIkey;
+    var map = new mapboxgl.Map({
+        container: 'map',
+        style: 'mapbox://styles/mapbox/streets-v9',
+        zoom: 14,
+        center: ([-97.73083469552839, 30.27040811140469]),
+    });
+    var searchTerm = "Franklin's Barbecue 900 E 11th St Austin TX "
+    geocode(searchTerm, mapboxAPIkey).then(function (foodieCoordinates) {
+        // console.log(`Here are the cordanates for the following location ${locationToSearchFor}`)
+        console.log(foodieCoordinates)
+
+
+        var marker = new mapboxgl.Marker()
+                .setLngLat(foodieCoordinates)
+                .addTo(map);
+
+
+        var FranklinBarbecue = new mapboxgl.Popup()
+            .setHTML('<img width="50px" height="auto" src="https://somuchlife.com/wp-content/uploads/2018/09/AFC_cover_002.jpg" >');
+
+
+        marker.setPopup(FranklinBarbecue);
+
+
+
+
+    })
+    //     var locationToSearchFor = "300 Alamo Plaza, San Antonio, TX 78205"
+    //
+    //     geocode(locationToSearchFor,mapboxAPIKey).then(function(alamoCoordinates){
+    //         console.log(`Here are the cordanates for the following location ${locationToSearchFor}`)
+    //         console.log(alamoCoordinates)
+    //
+    //         var alamoMarker = new mapboxgl.Marker()
+    //             .setLngLat(alamoCoordinates)
+    //             .addTo(map);
+    //
+    //         var alamoPopup = new mapboxgl.Popup()
+    //             // .setLngLat([-98.45251678925071,29.567244316609294])
+    //             .setHTML("<p>The Alamo</p>")
+    //             // .setMaxWidth("100px")
+    //             .addTo(map)
+    //
+    //         alamoMarker.setPopup(alamoPopup)
+    //
+    //     })
+    //
+    //
+    //
+    //
+    //
+    // }
+
+</script>
+
+</body>
+</html>
