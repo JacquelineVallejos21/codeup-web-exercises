@@ -36,30 +36,39 @@
 
         let restaurants =[
             {
-                info: {
                     name: "Casa Garcias Mexican Restaurant & Cantina",
                     FoodType: "Upbeat outpost for Tex-Mex favorites including all-day breakfast & lunch specials.",
-                },
-                address: "1901 I-35, Round Rock, TX 78664",
+                    address: "1901 I-35, Round Rock, TX 78664",
             },
             {
-                info: {
                     name: "BJ's Restaurant & Brewhouse",
                     FoodType: "Family-friendly chain outpost pairs familiar pub fare with an extensive list of house brews.",
-            },
-                 address: "1901 I-35, Round Rock, TX 78664",
+                    address: "1901 I-35, Round Rock, TX 78664",
             },
             {
-            info: {
                     name: "Grotto Ristorante",
                     FoodType:"Neapolitan-style Italian dishes paired with fine wines in an upscale setting with old-world charm.",
+                    address: "4715 Westheimer Rd, Houston, TX 77027",
             },
-            address: "4715 Westheimer Rd, Houston, TX 77027",
-        }
-            ]
+            ];
 
-    });
+
+        // mapboxgl.accessToken = mapboxToken;
+
+        restaurants.forEach(function(restaurants) {
+            console.log(restaurants)
+            geocode(restaurants.address, mapboxToken).then(function (foodieCoordinates) {
+                var restaurantPopup = new mapboxgl.Popup()
+                    .setHTML(restaurants.name + restaurants.FoodType + restaurants.address);
+
+                new mapboxgl.Marker()
+                    .setLngLat(foodieCoordinates)
+                    .setPopup(restaurantPopup)
+                    .addTo(map);
+            });
+        });
+        });
+
 </script>
-
 </body>
 </html>
