@@ -8,7 +8,7 @@
 </head>
 
 <body>
-<div id='map' style='width: 90vw; height: 90vh;'></div>
+<div id='map' style='width: 95vw; height: 95vh;'></div>
 <script src="./js/keys.js"></script>
 <script src="./js/mapbox-geocoder-utils.js"></script>
 <script>
@@ -19,7 +19,7 @@
         zoom: 14,
         center: ([-97.73083469552839, 30.27040811140469]),
     });
-    var searchTerm = "Franklin's Barbecue 900 E 11th St Austin TX "
+    var searchTerm = "Franklin Barbecue 900 E 11th St Austin TX "
     geocode(searchTerm, mapboxAPIkey).then(function (foodieCoordinates) {
         console.log(foodieCoordinates)
 
@@ -31,26 +31,27 @@
 
         var FranklinBarbecue = new mapboxgl.Popup()
             .setHTML('<img width="75px" height="auto" src="https://somuchlife.com/wp-content/uploads/2018/09/AFC_cover_002.jpg" ' +
-                '+ <h4><strong>Franklins Barbecue<strong></strong></h4>');
+                '+ <h4><strong>Franklin Barbecue<strong></strong></h4>' +
+                '<p>Long lines form early for brisket, pulled pork & other smoked meats at this lunch-only spot.</p>');
         marker.setPopup(FranklinBarbecue);
 
         let restaurants =[
             {
-                    name: "Casa Garcias Mexican Restaurant & Cantina",
-                    FoodType: "Upbeat outpost for Tex-Mex favorites including all-day breakfast & lunch specials.",
-                    address: "1901 I-35, Round Rock, TX 78664",
+                name: "Casa Garcias Mexican Restaurant & Cantina",
+                FoodType: "Upbeat outpost for Tex-Mex favorites including all-day breakfast & lunch specials.",
+                address: "1901 I-35, Round Rock, TX 78664",
             },
             {
-                    name: "BJ's Restaurant & Brewhouse",
-                    FoodType: "Family-friendly chain outpost pairs familiar pub fare with an extensive list of house brews.",
-                    address: "1901 I-35, Round Rock, TX 78664",
+                name: "BJ's Restaurant & Brewhouse",
+                FoodType: "Family-friendly chain outpost pairs familiar pub fare with an extensive list of house brews.",
+                address: "1901 I-35, Round Rock, TX 78664",
             },
             {
-                    name: "Grotto Ristorante",
-                    FoodType:"Neapolitan-style Italian dishes paired with fine wines in an upscale setting with old-world charm.",
-                    address: "4715 Westheimer Rd, Houston, TX 77027",
+                name: "Grotto Ristorante",
+                FoodType:"Neapolitan-style Italian dishes paired with fine wines in an upscale setting with old-world charm.",
+                address: "4715 Westheimer Rd, Houston, TX 77027",
             },
-            ];
+        ];
 
 
         // mapboxgl.accessToken = mapboxToken;
@@ -67,7 +68,7 @@
                     .addTo(map);
             });
         });
-        });
+    });
 
 </script>
 </body>
