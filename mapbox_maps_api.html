@@ -55,7 +55,7 @@
 
 
         restaurants.forEach(function(restaurant) {
-            // console.log(restaurants)
+            console.log(restaurants)
             geocode(restaurants.address, mapboxAPIkey).then(function (foodieCoordinates) {
                 var marker = new mapboxgl.Marker()
                     .setLngLat(foodieCoordinates)
@@ -63,7 +63,7 @@
                 var popup = new mapboxgl.Popup()
                     .setHTML(restaurant.name)
 
-                marker.setPopup(popop)
+                // marker.setPopup(popop)
 
 
             });
