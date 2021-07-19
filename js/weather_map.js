@@ -91,7 +91,7 @@ $(document).ready(function() {
                 .setLngLat(Chicago)
                 .addTo(map);
 
-            var FranklinBarbecue = new mapboxgl.Popup()
+            var Chicago= new mapboxgl.Popup()
                 .setHTML('Chicago');
             marker.setPopup(Chicago);
 
