@@ -54,7 +54,7 @@ $(document).ready(function() {
                 var latitude = lngLat.lat;
                 weatherOptions.lat = latitude
                 weatherOptions.lon = longitude
-                reverseGeocode({lng: longitude, lat: latitude}, mapboxToken).then(function (result) {
+                reverseGeocode({lng: longitude, lat: latitude}, mapboxAPIkey).then(function (result) {
                     $('#current-city').empty()
                     $('#current-city').append("Current Location " + result)
                 });
@@ -69,25 +69,32 @@ $(document).ready(function() {
         container: 'map',
         style: 'mapbox://styles/mapbox/streets-v9',
         zoom: 14,
-        center: ([-97.73083469552839, 30.27040811140469]),
+        center: ([-98.48527, 29.423017]),
     });
     console.log();
-        var marker = new mapboxgl.Marker()
-            // .addTo(map);
+    // var marker = new mapboxgl.Marker()
+    // .addTo(map);
 
-        var searchBar = document.querySelector("input");
+
+    var searchBar = document.querySelector("input");
 
     $("#button").click(function (e) {
-        e.preventDefault();
+        var searchBar = "Chicago"
         geocode(searchBar, mapboxAPIkey).then(function (result) {
             // lon: -98.48527,
             // lat: 29.423017,
             console.log(result);
             map.setCenter(result);
             map.setZoom(14);
-            marker.setLngLat(result);
-            marketDaily();
+
+            var marker = new mapboxgl.Marker()
+                .setLngLat(Chicago)
+                .addTo(map);
+
+            var FranklinBarbecue = new mapboxgl.Popup()
+                .setHTML('Chicago');
+            marker.setPopup(Chicago);
+
         });
-        FiveDayForecast();
     });
 });
